@@ -1,0 +1,587 @@
+
+<form id="location-input" class="standard-form csg-v1 mgc-form">
+  <!-- Page Leven Notification is mandatory -->
+  <div class="page-notification-error hide" id="page_notification">Page Level Notifications</div>
+
+  <!-- Each Subsection of form should be encapsulated with fieldset-->
+  <fieldset class="make-good-cents" style="height:2.4em;">
+    <!-- each input field MUST encapsulated with <div class="field_group"> </div>-->
+    <div class="row field_group">
+       <!-- data-validate attr value must match with your custom rules -->
+        <input class="mgc-form-input" type="text" maxlength="25" name="profile.location" placeholder="city, state or zip code" value="" id="profile_location" title="Location to Search" data-validate="location" aria-labelledby="arialabel_locaiton" aria-required="true" aria-invalid="false">
+        <input id="submit-location" class="mgc-form-submit" type="button" class="button small submit expand">
+       
+    </div>
+
+  </fieldset>
+
+ <!--  <p>stores</p> -->
+</form>
+<style>
+/* Form Styles */
+.mgc-form {
+	width: 350px;
+}
+
+input.mgc-form-input{
+	border: 1px solid #e21a2c!important;
+	margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    float: left;
+    width: 300px !important;
+    display: inline-block !important;
+    font-style: italic !important;
+    top:-22px;
+    position: relative;
+}
+
+input.mgc-form-submit{
+	background-color: #e21a2c;
+	background-image: url("https://assets.macys.com/dyn_img/creativepages/mgcsearch_1531438409633.png");
+    background-repeat: no-repeat;
+    height: 45px;
+    width: 45px;
+    background-position: center;
+    border: none;
+    display: inline-block;
+    position: absolute;
+    left: 335px;
+    top:26px;
+}
+
+.standard-form fieldset.make-good-cents small.error_msg{
+	margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    width: 400px;
+}
+
+/* Search Result Styles */
+.floatingList {
+    width: 475px;
+    height: 450px;
+    background: #fff;
+    position: absolute;
+    z-index: 999;
+    overflow: scroll;
+ 	top: 990px;
+    left: 20px;
+
+    .hidden {
+    	display: none !important;
+    }
+}
+
+div.mgc-right-column{
+	display: inline;
+}
+
+div.mgc-store-wrapper{
+	margin-left: 20px;
+  margin-top: 20px;
+}
+
+div.mgc-name-container{
+	width: 330px;
+	display: inline-block;
+	margin-left: 12px;
+  text-align: left;
+}
+
+p.store-name{
+	font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+    width: 255px;
+}
+
+p.address{
+	font-size: 14px;
+}
+
+p.distance{
+	display: inline-block;
+	vertical-align: top;
+  text-align: right;
+  position: relative;
+  top:-65px;
+  left:150px;
+}
+
+.mgc-search-input{
+	width: 475px;
+	height: 108px;
+    padding-left: 23px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1000;
+    top: 900px;
+    left: 20px;
+}
+
+.mgc-pin-logo{
+	vertical-align: top;
+    margin-top: 5px;
+}
+
+ul.floatingList li{
+	border-style: solid;
+	border-width: 0.5px 0px 0.5px 0px;
+	border-color: #dddddd;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding-top: 18px;
+	cursor: pointer;
+}
+
+.mgc-form-input{
+	width: 360px !important;
+}
+
+.mgc-find-out-banner{
+	background-color: #e21a2c;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	height: 75px;
+}
+
+.mgc-find-out-banner h4{
+	color: #fff;
+}
+
+.store-info-window{
+	padding: 0 10px;
+}
+
+/* Store Details Styles */
+
+button.x{
+	background: #fff;
+    color: #e21a2c;
+    font-size: 1.5em;
+    font-weight: 700;
+    width: 0px;
+    height: 75px;
+    border: none;
+    margin: -35px 0 0 -30px;
+    padding-top: 26px;
+}
+
+.store-details-wrapper{
+	padding: 10px 40px;
+    height: auto;
+}
+
+.store-details-wrapper p.addr{
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+
+a.store-info{
+    display: block;
+    margin: 0 auto;
+}
+
+button.store-directions{
+    width: 350px;
+    margin-bottom: 20px;
+}
+
+button.store-directions img{
+    margin-left: 10px;
+}
+
+button.store-details{
+    width: 350px;
+    margin-bottom: 20px;
+	color: #c00;
+	background-color: #fff;
+}
+
+.store-details-wrapper p.mgc-red{
+    color: #e21a2c;
+    font-weight: bold;
+    line-height: 20px;
+    padding-right: 85px;
+    margin-top: 20px;
+}
+
+.store-details-wrapper p.charity{
+	color: #999999;
+	margin-bottom: 0;
+	line-height: 1.4;
+}
+
+/* Store Info Window Styles */
+
+.store-info-window h4{
+	font-size: 18px;
+	margin-bottom: 15px !important;
+	margin-top: 20px !important;
+}
+
+.store-info-window p.address{
+    font-size: 15px;
+    line-height: 15px;
+    margin-bottom: 0.3em;
+}
+
+.store-info-window p.phoneNumber{
+	font-size: 15px;
+	margin-top: 1em;
+}
+
+.store-info-window a{
+	color: #e21a2c !important;
+    font-size: 15px;
+    margin-top: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 1023px) {
+	.mgc-desktop{
+		display: none;
+	}
+
+	.mgc-mobile{
+		display: block;
+	}
+
+	.mgc-social-share{
+		display: none;
+	}
+
+	.mgc-content-wrapper-1 {
+	    width: 100%;
+	    padding-top: 10%;
+	}
+
+	.mgc-content-wrapper-1 img{
+		width: 55%;
+		margin-bottom: 6vw;
+	}
+
+	.mgc-hero-container p.mgc-grey {
+	    font-size: 4.5vw;
+	    line-height: 7vw;
+	    color: #cdcdcd;
+	    margin-bottom: .4em;
+	    margin-top: 7vw;
+	    padding: 0 10vw;
+	}
+
+	.mgc-hero-container p{
+	    font-size: 5vw;
+	    line-height: 8vw;
+	    margin-bottom: .4em;
+	    padding: 0 8vw;
+	}
+
+	.mgc-hero-container p.mgc-red {
+	    font-size: 6vw;
+	    padding: 0 20vw;
+	}
+
+	.mgc-hero-container {
+	    background-image: url(https://assets.macys.com/dyn_img/creativepages/BG_Pattern_1531257515435.png);
+	    height: 156vw;
+	    background-position: 60% 72%;
+	    display: flex;
+	    justify-content: center;
+	    text-align: center;
+	    background-size: 300%;
+	}
+
+	.mgc-find-out-banner h4 {
+	    color: #fff;
+	    font-size: 5vw;
+	    padding: 0 19vw;
+	    line-height: 7vw;
+	}
+
+	p.mgc-dates{
+		font-size: 9vw;
+		margin-top: 7vw;
+		margin-bottom: 7vw;
+	}
+
+	.mgc-find-out-banner {
+	    height: 22vw;
+	}
+
+ 	.mgc-search-input {
+	    width: 100%;
+	    padding-left: 0vw;
+		top: 177vw;
+	    left: 0;
+	    height: 48vw;
+	}
+
+	.mgc-search-input.mgc-show{
+		/* top: 177vw; *
+
+	/* Form Styles */
+	.mgc-form {
+	    width: 100%;
+	}
+
+	form.standard-form .row {
+	    margin: 0 !important;
+	}
+
+	.standard-form fieldset{
+		padding: 0 1em !important;
+	}
+
+	input.mgc-form-input {
+	    margin-top: 4vw!important;
+	    margin-left: 3vw!important;
+	    width: 74vw!important;
+	    height: 14vw!important;
+	    font-size: 5vw !important;
+	}
+
+	input.mgc-form-submit {
+		background-size: 50%;
+		height: 14vw;
+		width: 14vw;
+		background-position: 50%;
+		margin-top: 4vw;
+	}
+
+	input#viewOnMap{
+	    width: 89vw;
+	    height: 14vw;
+		margin: 0 auto;
+		margin-top: 7%;
+		background-color: #e21a2c;
+		font-size: 4vw;
+	}
+
+	button.view-map {
+	    background-color: #e21a2c;
+	    margin: 5vw auto;
+	    width: 97%;
+	}
+
+	button.view-map img{
+		width: 35px;
+	}
+
+	/* Store List styles */
+
+	.floatingList {
+		display: none;
+	}
+
+	.floatingList.mgc-show{
+	    display: block;
+	    width: 100%;
+	    height: 123vw;
+	    top: 229vw;
+	    left: 0;
+	    overflow-y: scroll;
+	}
+
+	.floatingList.mgc-show.map{
+		top: 368vw;
+		height: 122vw;
+	}
+
+	div#main.mgc-show{
+		height: 151vw;
+	}
+
+	div.mgc-store-wrapper {
+	    margin-left: 5vw;
+	}
+
+	p.store-name {
+	    font-size: 4vw;
+	}
+
+	p.addrline1, p.store-hours, p.store-phone{
+	    margin-top: 2vw;
+	    font-size: 3.5vw;
+	    color: #999999;
+	    margin-bottom: 0;
+	}
+
+	p.store-phone{
+		margin-bottom: 7vw;
+	}
+
+	p.distance{
+		font-size: 3.5vw;
+		color: #999999;
+	}
+
+	div.mgc-name-container {
+	    width: 65%;
+	    display: inline-block;
+	    margin-left: 2vw;
+	}
+
+	div.mgc-right-column{
+		width: 50px;
+		float: right;
+		margin-right: 8vw;
+	}
+
+	a.call-phone-num img{
+		margin-top: 6vw;
+	}
+
+	/* Store Details Styles */
+	.store-details-wrapper {
+	    padding: 2vw 10vw;
+	    height: 45vw
+	}
+
+	.store-details-wrapper h4{
+		font-size: 6vw;
+		padding-top: 3vw;
+	}
+
+	.store-details-wrapper p.addr{
+	    text-transform: capitalize;
+	    margin-bottom: 0;
+	    font-size: 4vw;
+	    line-height: 5vw;
+	}
+
+	p.store-phone{
+		margin-top: 4vw;
+	}
+
+	a.store-info {
+	    width: 80%;
+	}
+
+	button.store-directions, button.store-details{
+		margin-bottom: 3vw;
+		width: 100%;
+	}
+
+	button.store-details{
+		color: #c00;
+    	background-color: #fff;
+    	margin-bottom: 8vw;
+	}
+
+	button.getDirections{
+	    background-image: url('https://assets.macys.com/dyn_img/creativepages/store_directions_logo.png');
+	    border: none;
+	    background-size: 80%;
+	    background-position: center;
+	}
+
+	.store-details-wrapper p.mgc-red {
+	    padding-right: 0;
+	}
+
+	/* Map Styles */
+	#charities-map{
+		display: none;
+	}
+
+	#charities-map.mgc-show{
+		display: block;
+		margin-top: 25vw;
+	    position: relative;
+	    overflow: hidden;
+	    height: 175vw;
+      background-color: darkcyan;
+      z-index: 11;
+	}
+
+	/* Banner Styles */
+	.mgc-banner-1 {
+	    height: 120vw;
+	    background-position: 58% 80%;
+	    background-size: 140%;
+	}
+
+	.mgc-banner-1.mgc-show{
+		margin-top: 172vw;
+	}
+
+	.mgc-banner-1.mgc-show.map{
+		margin-top: 122vw;
+	}
+
+	.mgc-content-wrapper-2 {
+	    width: 100%;
+	    padding-top: 7%;
+	}
+
+	.mgc-banner-1 h3 {
+	    font-size: 9vw;
+	}
+
+	.mgc-banner-1 p {
+	    font-size: 5vw;
+	    line-height: 7vw;
+	    padding: 0 8vw;
+	}
+
+	.mgc-banner-1 p:nth-of-type(2){
+		font-size: 4.5vw;
+	}
+
+	.mgc-banner-2 {
+	    height: 46vw;
+	}
+
+	.mgc-banner-2 p {
+	    margin-bottom: 2%;
+	    font-size: 4.5vw;
+	}
+
+	.mgc-banner-2 img{
+		width: 85%;
+		margin: 0 auto;
+	}
+
+	.mgc-content-wrapper-3 {
+	    width: 100%;
+	}
+
+	.standard-form fieldset.make-good-cents small.error_msg {
+	    margin-top: 0!important;
+	    margin-bottom: 0!important;
+	    width: 400px;
+	    position: absolute;
+	    top: 1vw;
+	    left: 7vw;
+	}
+
+	.mgc-form .page-notification-error{
+		display: none;
+	}
+
+}
+
+/* Ipad Landscape styles for search input and floating list */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+	.mgc-search-input {
+	    top: 840px;
+	    left: 20px;
+	}
+
+	.floatingList {
+	    top: 960px;
+	    left: 20px;
+	}
+}
+}
+</style>
+<!-- end dress destination location entry content -->

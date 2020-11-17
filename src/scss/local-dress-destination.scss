@@ -1,0 +1,801 @@
+
+div.ldd-gradient{
+    /*  height:40px;*/
+  background-color: white;
+  background-image:
+        /* linear-gradient(180deg, #dbdbdb 10%, #fff 90%); */
+  linear-gradient(to top, #fff, #fff, #fff, #fff, #fff, #dbdbdb);
+    }
+.ldd-title {
+  color:#e2192b;
+  text-align:center;
+  font-family:"HelveticaNeueW01-75Bold", Helvetica, Arial, sans-serif;
+  text-transform:uppercase;
+  padding-top:40px;
+  font-size:24px;
+}
+.ldd-copy {
+text-align:center;
+font-family:"HelveticaNeueW01-55Roma", Helvetica, Arial, sans-serif;
+font-size:20px;
+width:75%;
+margin:0 auto;
+height: auto;
+padding-bottom: 10px;
+}
+button.ldd-shop {
+background-color:black;
+color:white!important;
+font-size:14px;
+font-weight: 400;
+padding:10px 18px;
+margin-left:5px;
+text-decoration: none!important;
+border-color: black!important;
+}
+button.ldd-shop a {
+color:white!important;
+text-decoration: none!important;
+border-color: black;
+}
+.ldd-hero img {
+  width: 100%;
+}
+.ldd-hero {
+  width: 100%;
+	/*max-width: 1280px;*/
+  display: block;
+  margin: auto;
+  margin-top: 1.5em;
+  margin-bottom: .5em;
+  text-align: center;
+  height: auto;
+}
+.ldd-content {
+  margin: 0 auto;
+  height: auto;
+  text-align:center;
+  margin-bottom: 3em;
+  display: block;
+    min-height:900px;
+}
+.ldd-map {
+  height: 550px!important;
+  background-color: gray;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.ldd-mobile-shopnow {
+  width: 80%;
+  /*height:10vw;*/
+}
+.ldd-mobile-shopnow a{
+  color:white!important;
+  text-decoration: none!important;
+}
+.ldd-footer-mobile {
+  font-size: .81em;
+  margin: 4vw;
+}
+
+.ldd-search-positioning {
+  position: relative;
+  top:22px;
+  background-color: yellow;
+}
+.ldd-search-input {
+  display: flex;
+}
+
+@media only screen and (max-width: 1023px) {
+  .ldd-content {
+      min-height:60em;
+  }
+  .ldd-mobile-content {
+    background-color: #f1f1f1;
+    padding-bottom: 2em;
+  }
+  .ldd-title {
+    color:black;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size:9.4vw;
+    text-transform: capitalize;
+    text-align: left;
+    font-weight: 300;
+    margin-left: .6em;
+  }
+  .ldd-copy {
+    text-align: left;
+    width: 82%;
+  }
+}
+
+@font-face{
+    font-family:"HelveticaNeueW01-75Bold";
+    src:url("https://assets.macysassets.com/dyn_img/fonts/c07fef9e-a934-42d7-92ad-69205f2b8a00.eot?#iefix");
+    src:url("https://assets.macysassets.com/dyn_img/fonts/c07fef9e-a934-42d7-92ad-69205f2b8a00.eot?#iefix") format("eot"),
+    url("https://assets.macysassets.com/dyn_img/fonts/3b303641-706e-4221-94c4-4fb491f4f8ef.woff2") format("woff2"),
+    url("https://assets.macysassets.com/dyn_img/fonts/14ff6081-326d-4dae-b778-d7afa66166fc.woff") format("woff"),
+    url("https://assets.macysassets.com/dyn_img/fonts/8fda1e47-19be-46c7-8d83-8d4fb35572f0.ttf") format("truetype"),
+    url("https://assets.macysassets.com/dyn_img/fonts/f751c8ae-1057-46d9-8d74-62592e002568.svg#f751c8ae-1057-46d9-8d74-62592e002568") format("svg");
+
+
+
+/* Linotype Didot W01 Italic (27.63kb - Latin 1) */
+@font-face{
+font-family:"Didot W01 Italic";
+src:url("https://assets.macysassets.com/dyn_img/fonts/9c2cfd19-472b-4ef5-ad73-43eee68dc43b.eot?#iefix");
+src:url("https://assets.macysassets.com/dyn_img/fonts/9c2cfd19-472b-4ef5-ad73-43eee68dc43b.eot?#iefix") format("eot"),url("https://assets.macysassets.com/dyn_img/fonts/abe3d3a9-c990-459f-9407-54ac96cd2f00.woff2") format("woff2"),url("https://assets.macysassets.com/dyn_img/fonts/09a4b57b-7400-4d30-b4ba-d6e303c57868.woff") format("woff"),url("https://assets.macysassets.com/dyn_img/fonts/a0cb08d5-975f-4c8d-bcdc-d771a014d92a.ttf") format("truetype"),url("https://assets.macysassets.com/dyn_img/fonts/86d60a09-e8f8-4003-b688-0f8a2aba6532.svg#86d60a09-e8f8-4003-b688-0f8a2aba6532") format("svg");
+}
+
+.mgc-relative-wrap{
+	position: relative;
+}
+
+.mgc-mobile{
+	display: none;
+}
+
+/* Hero Styles */
+.mgc-hero-container{
+	background-image: url("https://assets.macys.com/dyn_img/creativepages/BG_Pattern_1531257515435.png");
+    height: 570px;
+    background-position: 60% 34%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.mgc-content-wrapper-1{
+	width: 32%;
+	padding-top: 3%;
+}
+
+.mgc-content-wrapper img{
+	margin: 9% 0 4% 0;
+}
+
+.mgc-hero-container p{
+    font-size: 20px;
+    color: #999;
+    margin-bottom: .4em;
+    margin-top: 5%;
+}
+
+.mgc-hero-container p.mgc-red{
+	color: #e21a2c;
+	font-weight: bold;
+}
+
+.mgc-bold{
+	font-weight: bold;
+}
+
+p.mgc-dates{
+	font-size: 35px;
+}
+
+.mgc-content-wrapper p:nth-of-type(4){
+    margin-top: 6%;
+}
+
+.mgc-social-share{
+	position: absolute;
+	top: 250px;
+    right: 0;
+}
+
+.mgc-social-share img{
+	display: inherit;
+}
+
+.mgc-social-share span{
+	font-weight: bold;
+    font-size: 15px;
+    margin: 12px 0;
+    display: block;
+}
+
+hr{
+	border-color: black;
+	margin: 0;
+}
+
+/* Banner Styles */
+.mgc-banner-1{
+	background-color: #e21a2c;
+	background-image: url("https://assets.macys.com/dyn_img/creativepages/Stars_1531267829714.png");
+	height: 440px;
+    background-position: 45% 59%;
+    background-size: 85%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content:center;
+    text-align: center;
+}
+
+.mgc-content-wrapper-2{
+	width: 35%;
+	color: #FFF;
+	padding-top: 3%;
+}
+
+.mgc-banner-1 h3{
+	color: #FFF;
+    font-size: 35px;
+}
+
+.mgc-banner-1 p{
+	font-size: 18px;
+}
+
+.mgc-banner-2{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	height: 250px;
+}
+
+.mgc-content-wrapper-3{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 396px;
+}
+
+.mgc-banner-2 p{
+	margin-bottom: 2%;
+}
+
+.mgc-banner-2 a:hover{
+	opacity: 0.5;
+}
+
+/* Map Styles */
+
+#map {
+	display: inline;
+	width: 100%;
+}
+
+/* Form Styles */
+.mgc-form {
+	width: 500px;
+}
+
+input.mgc-form-input{
+	border: 1px solid #e21a2c!important;
+	margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    float: left;
+    width: 300px !important;
+    display: inline-block !important;
+    font-style: italic !important;
+}
+
+input.mgc-form-submit{
+	background-color: #e21a2c;
+	background-image: url("https://assets.macys.com/dyn_img/creativepages/mgcsearch_1531438409633.png");
+    background-repeat: no-repeat;
+    height: 45px;
+    width: 45px;
+    background-position: center;
+    border: none;
+    display: inline-block;
+}
+
+.standard-form fieldset.make-good-cents small.error_msg{
+	margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    width: 400px;
+}
+
+/* Search Result Styles */
+.floatingList {
+    width: 475px;
+    height: 45px;
+    background: #f1f!important;
+    position: absolute;
+    z-index: 999;
+    overflow: scroll;
+ 	top: 990px;
+    left: 20px;
+
+    .hidden {
+    	display: none !important;
+    }
+}
+
+div.mgc-right-column{
+	display: inline;
+}
+
+div.mgc-store-wrapper{
+	margin-left: 20px;
+}
+
+div.mgc-name-container{
+	width: 330px;
+	display: inline-block;
+	margin-left: 12px;
+}
+
+p.store-name{
+	font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+p.address{
+	font-size: 14px;
+}
+
+p.distance{
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+
+.mgc-search-input{
+	width: 475px;
+	height: 88px;
+    padding-left: 23px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1000;
+	top: 755px;
+    left: 20px;
+}
+
+.mgc-pin-logo{
+	vertical-align: top;
+    margin-top: 5px;
+}
+
+ul.floatingList li{
+	border-style: solid;
+	border-width: 0.5px 0px 0.5px 0px;
+	border-color: #dddddd;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding-top: 18px;
+	cursor: pointer;
+}
+
+.mgc-form-input{
+	width: 360px !important;
+}
+
+.mgc-find-out-banner{
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+
+.store-info-window{
+	padding: 0 10px;
+}
+
+/* Store Details Styles */
+
+button.x{
+	background: #fff;
+    color: #e21a2c;
+    font-size: 1.5em;
+    font-weight: 700;
+    width: 0px;
+    height: 10px;
+    border: none;
+    margin: -35px 0 0 -30px;
+    padding-top: 26px;
+}
+
+.store-details-wrapper{
+	padding: 10px 40px;
+    height: 332px;
+}
+
+.store-details-wrapper p.addr{
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+
+a.store-info{
+    display: block;
+    margin: 0 auto;
+}
+
+button.store-directions{
+    width: 350px;
+    margin-bottom: 20px;
+}
+
+button.store-directions img{
+    margin-left: 10px;
+}
+
+button.store-details{
+    width: 350px;
+    margin-bottom: 20px;
+	color: #c00;
+	background-color: #fff;
+}
+
+.store-details-wrapper p.mgc-red{
+    color: #e21a2c;
+    font-weight: bold;
+    line-height: 20px;
+    padding-right: 85px;
+    margin-top: 20px;
+}
+
+.store-details-wrapper p.charity{
+	color: #999999;
+	margin-bottom: 0;
+	line-height: 1.4;
+}
+
+/* Store Info Window Styles */
+
+.store-info-window h4{
+	font-size: 18px;
+	margin-bottom: 15px !important;
+	margin-top: 20px !important;
+}
+
+.store-info-window p.address{
+    font-size: 15px;
+    line-height: 15px;
+    margin-bottom: 0.3em;
+}
+
+.store-info-window p.phoneNumber{
+	font-size: 15px;
+	margin-top: 1em;
+}
+
+.store-info-window a{
+	color: #e21a2c !important;
+    font-size: 15px;
+    margin-top: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 1023px) {
+	.mgc-desktop{
+		display: none;
+	}
+
+	.mgc-mobile{
+		display: block;
+	}
+
+	.mgc-social-share{
+		display: none;
+	}
+
+	.mgc-content-wrapper-1 {
+	    width: 100%;
+	    padding-top: 10%;
+	}
+
+	.mgc-content-wrapper-1 img{
+		width: 55%;
+		margin-bottom: 6vw;
+	}
+
+	.mgc-hero-container p.mgc-grey {
+	    font-size: 4.5vw;
+	    line-height: 7vw;
+	    color: #cdcdcd;
+	    margin-bottom: .4em;
+	    margin-top: 7vw;
+	    padding: 0 10vw;
+	}
+
+	.mgc-hero-container p{
+	    font-size: 5vw;
+	    line-height: 8vw;
+	    margin-bottom: .4em;
+	    padding: 0 8vw;
+	}
+
+	.mgc-hero-container p.mgc-red {
+	    font-size: 6vw;
+	    padding: 0 20vw;
+	}
+
+	.mgc-hero-container {
+	    background-image: url(https://assets.macys.com/dyn_img/creativepages/BG_Pattern_1531257515435.png);
+	    height: 156vw;
+	    background-position: 60% 72%;
+	    display: flex;
+	    justify-content: center;
+	    text-align: center;
+	    background-size: 300%;
+	}
+
+
+	p.mgc-dates{
+		font-size: 9vw;
+		margin-top: 7vw;
+		margin-bottom: 7vw;
+	}
+
+
+ 	.mgc-search-input {
+	    width: 100%;
+	    padding-left: 0vw;
+		top: 144vw;
+	    left: 0;
+	    height: 48vw;
+	}
+
+	.mgc-search-input.mgc-show{
+		top: 144vw;
+	}
+
+	/* Form Styles */
+	.mgc-form {
+	    width: 100%;
+	}
+
+	form.standard-form .row {
+	    margin: 0 !important;
+	}
+
+	.standard-form fieldset{
+		padding: 0 1em !important;
+	}
+
+	input.mgc-form-input {
+	    margin-top: 4vw!important;
+	    width: 74vw!important;
+	    height: 14vw!important;
+	    font-size: 5vw !important;
+      background-color: blue;
+	}
+
+	input.mgc-form-submit {
+		background-size: 50%;
+		height: 14vw;
+		width: 14vw;
+		background-position: 50%;
+		margin-top: 4vw;
+	}
+
+	input#viewOnMap{
+	    width: 89vw;
+	    height: 14vw;
+		margin: 0 auto;
+		margin-top: 7%;
+		background-color: #e21a2c;
+		font-size: 4vw;
+	}
+
+	button.view-map {
+	    background-color: #e21a2c;
+	    margin: 5vw auto;
+	    width: 97%;
+	}
+
+	button.view-map img{
+		width: 35px;
+	}
+
+	/* Store List styles */
+
+	.floatingList {
+		display: none;
+	}
+
+	.floatingList.mgc-show{
+	    display: block;
+	    width: 100%;
+	    height: 123vw;
+	    top: 229vw;
+	    left: 0;
+	    overflow-y: scroll;
+	}
+
+	.floatingList.mgc-show.map{
+		top: 368vw;
+		height: 122vw;
+	}
+
+	div#main.mgc-show{
+		height: 151vw;
+	}
+
+	div.mgc-store-wrapper {
+	    margin-left: 5vw;
+	}
+
+	p.store-name {
+	    font-size: 4vw;
+	}
+
+	p.addrline1, p.store-hours, p.store-phone{
+	    margin-top: 2vw;
+	    font-size: 3.5vw;
+	    color: #999999;
+	    margin-bottom: 0;
+	}
+
+	p.store-phone{
+		margin-bottom: 7vw;
+	}
+
+	p.distance{
+		font-size: 3.5vw;
+		color: #999999;
+	}
+
+	div.mgc-name-container {
+	    width: 65%;
+	    display: inline-block;
+	    margin-left: 2vw;
+	}
+
+	div.mgc-right-column{
+		width: 50px;
+		float: right;
+		margin-right: 8vw;
+	}
+
+	a.call-phone-num img{
+		margin-top: 6vw;
+	}
+
+	/* Store Details Styles */
+	.store-details-wrapper {
+	    padding: 2vw 10vw;
+	    height: 75vw
+	}
+
+	.store-details-wrapper h4{
+		font-size: 6vw;
+		padding-top: 3vw;
+	}
+
+	.store-details-wrapper p.addr{
+	    text-transform: capitalize;
+	    margin-bottom: 0;
+	    font-size: 4vw;
+	    line-height: 5vw;
+	}
+
+	p.store-phone{
+		margin-top: 4vw;
+	}
+
+	a.store-info {
+	    width: 80%;
+	}
+
+	button.store-directions, button.store-details{
+		margin-bottom: 3vw;
+		width: 100%;
+	}
+
+	button.store-details{
+		color: #c00;
+    	background-color: #fff;
+    	margin-bottom: 8vw;
+	}
+
+	button.getDirections{
+	    background-image: url('https://assets.macys.com/dyn_img/creativepages/store_directions_logo.png');
+	    border: none;
+	    background-size: 80%;
+	    background-position: center;
+	}
+
+	.store-details-wrapper p.mgc-red {
+	    padding-right: 0;
+	}
+
+	/* Map Styles */
+	#charities-map{
+		display: none;
+	}
+
+	#charities-map.mgc-show{
+		display: block;
+		margin-top: 50vw;
+	    position: relative;
+	    overflow: hidden;
+	    height: 140vw;
+	}
+
+	/* Banner Styles */
+	.mgc-banner-1 {
+	    height: 120vw;
+	    background-position: 58% 80%;
+	    background-size: 140%;
+	}
+
+	.mgc-banner-1.mgc-show{
+		margin-top: 172vw;
+	}
+
+	.mgc-banner-1.mgc-show.map{
+		margin-top: 122vw;
+	}
+
+	.mgc-content-wrapper-2 {
+	    width: 100%;
+	    padding-top: 7%;
+	}
+
+	.mgc-banner-1 h3 {
+	    font-size: 9vw;
+	}
+
+	.mgc-banner-1 p {
+	    font-size: 5vw;
+	    line-height: 7vw;
+	    padding: 0 8vw;
+	}
+
+	.mgc-banner-1 p:nth-of-type(2){
+		font-size: 4.5vw;
+	}
+
+	.mgc-banner-2 {
+	    height: 46vw;
+	}
+
+	.mgc-banner-2 p {
+	    margin-bottom: 2%;
+	    font-size: 4.5vw;
+	}
+
+	.mgc-banner-2 img{
+		width: 85%;
+		margin: 0 auto;
+	}
+
+	.mgc-content-wrapper-3 {
+	    width: 100%;
+	}
+
+	.standard-form fieldset.make-good-cents small.error_msg {
+	    margin-top: 0!important;
+	    margin-bottom: 0!important;
+	    width: 400px;
+	    position: absolute;
+	    top: 1vw;
+	    left: 7vw;
+	}
+
+	.mgc-form .page-notification-error{
+		display: none;
+	}
+
+}
+
+/* Ipad Landscape styles for search input and floating list */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+	.mgc-search-input {
+	    top: 840px;
+	    left: 20px;
+	}
+
+	.floatingList {
+	    top: 990px;
+	    left: 20px;
+	}
+}
+}

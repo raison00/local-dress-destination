@@ -1,0 +1,23 @@
+<!-- List Store View  -->
+{{#if nostore }}
+ <div> stores not found</div>
+{{else}}
+  <div data-storenum='{{id}}' data-latlong='{{geoLocation.latitude}}, {{geoLocation.longitude}}' data-name='{{name}}' data-address='{{address.line1}}' data-citystatezip='{{address.city}}, {{address.state}} {{address.zipCode}}' data-phonenumber='{{phoneNumber}}' class="mgc-store-wrapper">
+	<img class='mgc-pin-logo' src='https://assets.macys.com/dyn_img/creativepages/star_pin_logo_1531693364963.png'>
+
+	<div class='mgc-name-container'>
+		<p class='store-name'>{{name}}</p>
+
+		<p class='address mgc-desktop'>{{address.city}}, {{address.state}}</p>
+
+
+	</div>
+
+	<div class="mgc-right-column">
+		<p class='distanceInMiles'>{{geoLocation.distance}} {{geoLocation.unitDistance}}</p>
+
+	</div>
+</div>
+ 
+{{/if}}
+<!-- end dress destination store template content -->

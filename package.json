@@ -1,0 +1,96 @@
+{
+  "name": "@marketing-campaigns/local-dress-destination",
+  "description": "",
+  "version": "0.53.0",
+  "repository": {
+    "type": "git",
+    "url": "git@code.devops.fds.com:polaris/campaign/local-dress-destination.git"
+  },
+  "config": {
+    "environment": [
+      {
+        "name": "key1",
+        "local": {
+          "mcom": "value1",
+          "bcom": "value2"
+        },
+        "prod": {
+          "mcom": "__VALUE3__",
+          "bcom": "__VALUE4__"
+        }
+      },
+      {
+        "name": "XAPI_HOST",
+        "local": {
+          "mcom": "https://mcom.xapi.com",
+          "bcom": "https://bcom.xapi.com"
+        },
+        "prod": {
+          "mcom": "__VALUE5__",
+          "bcom": "__VALUE6__"
+        }
+      }
+    ],
+    "pages": [
+      {
+        "path": "/",
+        "template": "main",
+        "startDate": "2018-09-24T08:00",
+        "autoHeader": true,
+        "autoFooter": true,
+        "quickview": false,
+        "tags": {
+          "description": "Head to a selected Macy's store for our best dress assortment yet! The Dress Destination Location will help you find an in-store experience with brand new fitting rooms and assistance from our experts.",
+          "canonical": "https://www.macys.com/p/local-dress-destination",
+          "robots": "index, follow",
+          "title": "The Dress Destination Location - Macys",
+          "ogTags": [
+            {
+              "key": "og:url",
+              "value": "https://www.macys.com/p/local-dress-destination"
+            },
+            {
+              "key": "og:title",
+              "value": ""
+            },
+            {
+              "key": "og:description",
+              "value": "Head to a selected Macys store for our best dress assortment yet! The Dress Destination Location will help you find an in-store experience with brand new fitting rooms and assistance from our experts."
+            },
+            {
+              "key": "og:image",
+              "value": ""
+            }
+          ]
+        },
+        "coremetrics": {
+          "pageType": "staticpages",
+          "pageId": "localdressdestination",
+          "categoryID": "standard"
+        }
+      }
+    ],
+    "macysCliVersion": "1.293.0"
+  },
+  "engines": {
+    "node": "8.x",
+    "npm": "5.x"
+  },
+  "devDependencies": {
+    "@core/dev-server": "^1.0.0",
+    "@core/lib": "^1.0.0",
+    "@core/server": "^1.59.0",
+    "lodash": "^4.17.11"
+  },
+  "dependencies": {
+    "@component/common": "1.175.1",
+    "@component/form-validation": "^3.1.9",
+    "@core/style-guide": "^2.42.0",
+    "handlebars-intl": "^1.1.2"
+  },
+  "eslintConfig": {
+    "globals": {
+      "window": true
+    }
+  }
+}
